@@ -7,7 +7,17 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "carlotFactory.h"
 
 @interface ViewController : UIViewController
+{
+    UILabel *topLabel;
+    UILabel *economyLabel;
+    UILabel *economyNumLabel;
+    UILabel *raceCarLabel;
+    UILabel *raceCarNumLabel;
+    UILabel *luxuryCarLabel;
+    UILabel *luxuryCarNumLabel;
+}
 
 @end

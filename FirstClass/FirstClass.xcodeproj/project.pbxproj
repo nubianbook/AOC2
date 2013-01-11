@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA55522A169E21CF00F06575 /* carlotFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = EA555229169E21CF00F06575 /* carlotFactory.m */; };
+		EA55522D169E220100F06575 /* baseCarlot.m in Sources */ = {isa = PBXBuildFile; fileRef = EA55522C169E220100F06575 /* baseCarlot.m */; };
+		EA555230169E230800F06575 /* economyCarlot.m in Sources */ = {isa = PBXBuildFile; fileRef = EA55522F169E230800F06575 /* economyCarlot.m */; };
+		EA555233169E237100F06575 /* raceCarlot.m in Sources */ = {isa = PBXBuildFile; fileRef = EA555232169E237100F06575 /* raceCarlot.m */; };
+		EA555236169E23B600F06575 /* luxuryCarlot.m in Sources */ = {isa = PBXBuildFile; fileRef = EA555235169E23B600F06575 /* luxuryCarlot.m */; };
 		EAE89FF2169CE9F20043D033 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE89FF1169CE9F20043D033 /* UIKit.framework */; };
 		EAE89FF4169CE9F20043D033 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE89FF3169CE9F20043D033 /* Foundation.framework */; };
 		EAE89FF6169CE9F20043D033 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAE89FF5169CE9F20043D033 /* CoreGraphics.framework */; };
@@ -21,6 +26,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA555228169E21CF00F06575 /* carlotFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = carlotFactory.h; sourceTree = "<group>"; };
+		EA555229169E21CF00F06575 /* carlotFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = carlotFactory.m; sourceTree = "<group>"; };
+		EA55522B169E220100F06575 /* baseCarlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseCarlot.h; sourceTree = "<group>"; };
+		EA55522C169E220100F06575 /* baseCarlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseCarlot.m; sourceTree = "<group>"; };
+		EA55522E169E230800F06575 /* economyCarlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = economyCarlot.h; sourceTree = "<group>"; };
+		EA55522F169E230800F06575 /* economyCarlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = economyCarlot.m; sourceTree = "<group>"; };
+		EA555231169E237100F06575 /* raceCarlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = raceCarlot.h; sourceTree = "<group>"; };
+		EA555232169E237100F06575 /* raceCarlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = raceCarlot.m; sourceTree = "<group>"; };
+		EA555234169E23B600F06575 /* luxuryCarlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = luxuryCarlot.h; sourceTree = "<group>"; };
+		EA555235169E23B600F06575 /* luxuryCarlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = luxuryCarlot.m; sourceTree = "<group>"; };
 		EAE89FED169CE9F20043D033 /* FirstClass.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirstClass.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAE89FF1169CE9F20043D033 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		EAE89FF3169CE9F20043D033 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,6 +104,16 @@
 				EAE8A00A169CE9F30043D033 /* ViewController.m */,
 				EAE8A00C169CE9F30043D033 /* ViewController.xib */,
 				EAE89FF8169CE9F20043D033 /* Supporting Files */,
+				EA555228169E21CF00F06575 /* carlotFactory.h */,
+				EA555229169E21CF00F06575 /* carlotFactory.m */,
+				EA55522B169E220100F06575 /* baseCarlot.h */,
+				EA55522C169E220100F06575 /* baseCarlot.m */,
+				EA55522E169E230800F06575 /* economyCarlot.h */,
+				EA55522F169E230800F06575 /* economyCarlot.m */,
+				EA555231169E237100F06575 /* raceCarlot.h */,
+				EA555232169E237100F06575 /* raceCarlot.m */,
+				EA555234169E23B600F06575 /* luxuryCarlot.h */,
+				EA555235169E23B600F06575 /* luxuryCarlot.m */,
 			);
 			path = FirstClass;
 			sourceTree = "<group>";
@@ -176,6 +201,11 @@
 				EAE89FFE169CE9F20043D033 /* main.m in Sources */,
 				EAE8A002169CE9F20043D033 /* AppDelegate.m in Sources */,
 				EAE8A00B169CE9F30043D033 /* ViewController.m in Sources */,
+				EA55522A169E21CF00F06575 /* carlotFactory.m in Sources */,
+				EA55522D169E220100F06575 /* baseCarlot.m in Sources */,
+				EA555230169E230800F06575 /* economyCarlot.m in Sources */,
+				EA555233169E237100F06575 /* raceCarlot.m in Sources */,
+				EA555236169E23B600F06575 /* luxuryCarlot.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +282,7 @@
 		EAE8A012169CE9F30043D033 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstClass/FirstClass-Prefix.pch";
 				INFOPLIST_FILE = "FirstClass/FirstClass-Info.plist";
@@ -263,6 +294,7 @@
 		EAE8A013169CE9F30043D033 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_WARN_OBJCPP_ARC_ABI = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FirstClass/FirstClass-Prefix.pch";
 				INFOPLIST_FILE = "FirstClass/FirstClass-Info.plist";
@@ -290,6 +322,7 @@
 				EAE8A013169CE9F30043D033 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
