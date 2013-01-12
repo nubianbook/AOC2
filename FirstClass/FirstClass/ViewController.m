@@ -16,7 +16,7 @@
 
 - (void)viewDidLoad
 {
-    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(30.0f, 5.0f, 200.0f, 30.0f)];
+    topLabel = [[UILabel alloc] initWithFrame:CGRectMake(50.0f, 5.0f, 200.0f, 30.0f)];
     topLabel.backgroundColor = [UIColor yellowColor];
     topLabel.textColor = [UIColor blackColor];
     topLabel.text = [NSString stringWithFormat:@"Carol Gaylor AOC2 1301"];
