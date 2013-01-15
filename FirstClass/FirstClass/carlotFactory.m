@@ -12,7 +12,19 @@
 
 +(baseCarlot *)createNewCarlot: (int)carlotType
 {
-    return [[economyCarlot alloc] init];
+   return [[economyCarlot alloc] init];
+    
+    if (carlotType == economy)
+    {
+        //return [[economyCarlot alloc] init];
+    } else if (carlotType == economy)
+    {
+        //return [[raceCarlot alloc] init];
+    } else if (carlotType == race)
+    {
+       return [[luxuryCarlot alloc] init];
+    } else return nil;
+   
 }
 
 @end

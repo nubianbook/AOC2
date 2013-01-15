@@ -10,7 +10,7 @@
 
 @implementation raceCarlot
 
-@synthesize amountCars, amountCarsSold, amountCarsLeft;
+@synthesize pricePerEngineSize, totalPriceRaceCar, discount, cost;
 
 // customize the init for race carLot
 -(id)init
@@ -19,19 +19,21 @@
         if (self !=nil)
         {
             // setting data members defaults
-            [self setAmountCars:20];
-            [self setAmountCarsSold:5];
-            [self setAmountCarsLeft:15];
+            [self setPricePerEngineSize:2100];
+            [self setCarName:@"Mustang"];
+            [self setCost:70000];
+            [self setDiscount:1500];
+            [self setTotalPriceRaceCar:0];
             NSLog(@"You are now on the Race Car lot");
         }
         return self;
 };
 
 // overwriting the calculation method
--(void)calculateHowManyRaceCars
+-(void)calculateTotalPriceRaceCar
 {
-    [self setAmountCarsLeft:(amountCars - amountCarsSold)];
-    NSLog(@"There were %i race cars remaining", self.amountCarsLeft);
+    [self setTotalPriceRaceCar:(cost + pricePerEngineSize - discount)];
+    NSLog(@"There were %i race cars remaining", self.totalPriceRaceCar);
 }
     
 @end

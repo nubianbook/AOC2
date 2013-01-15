@@ -12,8 +12,6 @@
 @interface economyCarlot : baseCarlot
 
 // data members of for how many cars total and how many cars left after sale
-@property int totalCars;
-@property int totalCarsSold;
-@property int totalCarsLeft;
+@property int howManySmallEngines;
 
 @end

@@ -10,19 +10,11 @@
 #import "baseCarlot.h"
 
 @interface raceCarlot : baseCarlot
-{
-    int raceCars;
-}
 
-typedef enum{
-    twoDoor,
-    fourDoor,
-    hatchback
-} raceCars;
+-(void)calculateTotalPriceRaceCar;
 
-@property int amountCars;
-@property int amountCarsSold;
-@property int amountCarsLeft;
+@property int pricePerEngineSize;
+@property int totalPriceRaceCar;
 
 
 

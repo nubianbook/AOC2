@@ -11,27 +11,28 @@
 @implementation baseCarlot
 
 // this synthesize creates get and set methods for each property
-@synthesize carType, carInfo, howManyCars;
+@synthesize carType, carName, carCost, discount, cost;
 
-// initialize the base Carlot, creating the instance and setting up how many cars to zero
+// initialize the base Carlot, creating the instance and setting up car cost to zero
 
 -(id)init
 {
     self = [super init];
     if (self !=nil)
     {
-        [self setHowManyCars:0];
         [self setCarType:nil];
-        [self setCarInfo:nil];
+        [self setCarName:nil];
+        [self setCarCost:0];
+        [self setDiscount:0];
     }
     return self;
 }
 
-// calculation and or manipulation method to find how many cars
--(void)calculateHowManyCars
+// calculation and or manipulation method to car cost
+-(void)calculateCarCost
 {
     // no calculating now, only a statement written to the log with the current value
-    NSLog(@"There are %i cars remaining in this car lot", howManyCars);
+    [self setCarCost:cost - discount];
 }
 
 

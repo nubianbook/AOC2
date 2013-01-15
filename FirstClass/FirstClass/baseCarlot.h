@@ -21,16 +21,18 @@ typedef enum{
 
 // these are my data members for cars available, an array for car colors and a NSString for car details
 
-@property (nonatomic, assign) NSArray *carType;
-@property (nonatomic, assign) NSString *carInfo;
-@property int howManyCars;
+@property (strong) NSArray *carType;  // I replaced (nonatomic, assign) with strong
+@property (strong) NSString *carName;
+@property int discount;
+@property int cost;
+@property int carCost;
 
 
 // initialize
 -(id)init;
 
 // this is to calculate and or to manipulate method to find out how many cars
--(void)calculateHowManyCars;
+-(void)calculateCarCost;
  
    
 

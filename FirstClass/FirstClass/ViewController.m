@@ -24,7 +24,7 @@
     
     // create a economy Carlot and set how many
     economyCarlot *carolsDealerShip = (economyCarlot*)[carlotFactory createNewCarlot:economy];
-    [carolsDealerShip setHowManyCars:50];
+    [carolsDealerShip setHowManySmallEngines:40];
     
     economyLabel = [[UILabel alloc] initWithFrame:CGRectMake(2.0f, 60.0f, 320.0f, 50.0f)];
     economyLabel.backgroundColor = [UIColor orangeColor];
@@ -38,7 +38,7 @@
     economyNumLabel.backgroundColor = [UIColor purpleColor];
     economyNumLabel.textColor = [UIColor whiteColor];
     economyNumLabel.numberOfLines = 4;
-    economyNumLabel.text = [NSString stringWithFormat:@"There are %i econ cars on the lot", [carolsDealerShip howManyCars]];
+    economyNumLabel.text = [NSString stringWithFormat:@"There are %i econ cars on the lot", [carolsDealerShip howManySmallEngines]];
     [self.view addSubview:economyNumLabel];
     
     
@@ -48,18 +48,18 @@
                                      initWithObjects:@"economy",nil];
         [carolsDealerShip setCarType:economyCarType];
         
-        NSString *econCarInfo = @"The Best Economy Cars in Michigan are sold at Carols Dealership.";
-        [carolsDealerShip setCarInfo:econCarInfo];
+        NSString *econCarName = @"The Best Economy Cars in Michigan are sold at Carols Dealership.";
+        [carolsDealerShip setCarName:econCarName];
         
         NSLog(@"Drive a car off Carols Carlot "
               "get the %@", [carolsDealerShip carType]);
-        NSLog(@"%@", carolsDealerShip.carInfo);
+        NSLog(@"%@", carolsDealerShip.carName);
         
         }
     
     // create same info for race car
     raceCarlot *carolsRaceCarlot = (raceCarlot*)[carlotFactory createNewCarlot:race];
-    [carolsRaceCarlot setHowManyCars:20];
+    [carolsRaceCarlot setPricePerEngineSize:2100];
     
     raceCarLabel = [[UILabel alloc] initWithFrame:CGRectMake(2.0f, 200.0f, 320.0f, 50.0f)];
     raceCarLabel.backgroundColor = [UIColor redColor];
@@ -72,28 +72,28 @@
     raceCarNumLabel.backgroundColor = [UIColor orangeColor];
     raceCarNumLabel.textColor = [UIColor blueColor];
     raceCarNumLabel.numberOfLines = 4;
-    raceCarNumLabel.text = [NSString stringWithFormat:@"There are %i race cars on the lot", [carolsRaceCarlot howManyCars]];
+    raceCarNumLabel.text = [NSString stringWithFormat:@"There are %i race cars on the lot", [carolsRaceCarlot pricePerEngineSize]];
     [self.view addSubview:raceCarNumLabel];
     
     if (carolsRaceCarlot != nil) {
         NSArray *raceCarType = [[NSArray alloc]
-                                   initWithObjects:@"race car",nil];
+                                   initWithObjects:@"race car", nil];
         [carolsRaceCarlot setCarType:raceCarType];
         
-        NSString *raceCarInfo = @"The Best Race Cars in Michigan are sold at Carols Dealership.";
-        [carolsDealerShip setCarInfo:raceCarInfo];
+        NSString *raceCarName = @"The Best Race Cars in Michigan are sold at Carols Dealership.";
+        [carolsDealerShip setCarName:raceCarName];
         
         NSLog(@"Drive a car off Carols Carlot "
               "get the %@", [carolsRaceCarlot carType]);
-        NSLog(@"%@", carolsRaceCarlot.carInfo);
+        NSLog(@"%@", carolsRaceCarlot.carName);
         
         // calculate and log how many cars
-        [carolsRaceCarlot calculateHowManyCars];
+        [carolsRaceCarlot calculateTotalPriceRaceCar];
     }
     
     // create same info for luxury car
     luxuryCarlot *carolsLuxuryCarlot = (luxuryCarlot*)[carlotFactory createNewCarlot:luxury];
-    [carolsLuxuryCarlot setHowManyCars:15];
+    [carolsLuxuryCarlot setLuxuryUpgradePrices:2500];
     
     luxuryCarLabel = [[UILabel alloc] initWithFrame:CGRectMake(2.0f, 330.0f, 320.0f, 50.0f)];
     luxuryCarLabel.backgroundColor = [UIColor blueColor];
@@ -106,7 +106,7 @@
     luxuryCarNumLabel.backgroundColor = [UIColor whiteColor];
     luxuryCarNumLabel.textColor = [UIColor blueColor];
     luxuryCarNumLabel.numberOfLines = 4;
-    luxuryCarNumLabel.text = [NSString stringWithFormat:@"There are %i luxury cars on the lot", [carolsLuxuryCarlot howManyCars]];
+    luxuryCarNumLabel.text = [NSString stringWithFormat:@"There are %i luxury cars on the lot", [carolsLuxuryCarlot luxuryUpgradePrices]];
     [self.view addSubview:luxuryCarNumLabel];
     
     if (carolsLuxuryCarlot != nil) {
@@ -114,15 +114,15 @@
                                 initWithObjects:@"luxury car",nil];
         [carolsLuxuryCarlot setCarType:luxuryCarType];
         
-        NSString *luxuryCarInfo = @"The Best Race Cars in Michigan are sold at Carols Dealership.";
-        [carolsLuxuryCarlot setCarInfo:luxuryCarInfo];
+        NSString *luxuryCarName = @"The Best Race Cars in Michigan are sold at Carols Dealership.";
+        [carolsLuxuryCarlot setCarName:luxuryCarName];
         
         NSLog(@"Drive a car off Carols Carlot "
               "get the %@", [carolsLuxuryCarlot carType]);
-        NSLog(@"%@", carolsLuxuryCarlot.carInfo);
+        NSLog(@"%@", carolsLuxuryCarlot.carName);
         
         // calculate and log how many cars
-        [carolsLuxuryCarlot calculateHowManyCars];
+        [carolsLuxuryCarlot calculateTotalPrice];
     }
     
      

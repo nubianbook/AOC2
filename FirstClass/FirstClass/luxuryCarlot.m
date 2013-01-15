@@ -10,7 +10,7 @@
 
 @implementation luxuryCarlot
 
-@synthesize amountLuxuryCars, amountLuxuryCarsLeft, amountLuxuryCarsSold;
+@synthesize luxuryUpgradePrices, luxuryTotalPrices, cost, discount;
 
 // customizing the init for luxury Carlot
 -(id)init
@@ -19,19 +19,21 @@
     if (self !=nil)
     {
         // setting data members defaults
-        [self setAmountLuxuryCars:15];
-        [self setAmountLuxuryCarsSold:7]; 
-        [self setAmountLuxuryCarsLeft:8];
+        [self setLuxuryUpgradePrices:2500];
+        [self setCarName:@"Lincoln"];
+        [self setCost:50000];
+        [self setDiscount:6000];
+        
         NSLog(@"You are now on the Luxury Car lot");
     }
     return self;
 };
 
 // overwriting the calculation method
--(void)calculateHowManyLuxuryCars
+-(void)calculateTotalPrice
 {
-    [self setAmountLuxuryCarsLeft:(amountLuxuryCars - amountLuxuryCarsSold)];
-    NSLog(@"There were %i luxury cars remaining", self.amountLuxuryCarsLeft);
+    [self setLuxuryTotalPrices:(luxuryUpgradePrices + cost - discount)];
+    NSLog(@"There were %i luxury cars remaining", self.luxuryTotalPrices);
 }
 
 @end

@@ -10,18 +10,11 @@
 #import "baseCarlot.h"
 
 @interface luxuryCarlot : baseCarlot
-{
-    int luxuryCars;
-}
 
-typedef enum{
-    smallLux,
-    sedanLux,
-    fullSizeLux
-} luxuryCars;
+-(void)calculateTotalPrice;
 
-@property int amountLuxuryCars;
-@property int amountLuxuryCarsSold;
-@property int amountLuxuryCarsLeft;
+@property int luxuryTotalPrices;
+@property int luxuryUpgradePrices;
+
 
 @end
