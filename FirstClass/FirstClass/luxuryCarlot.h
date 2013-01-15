@@ -10,6 +10,14 @@
 #import "baseCarlot.h"
 
 @interface luxuryCarlot : baseCarlot
+{
+    int luxuryEnum;
+}
+
+typedef enum{
+    LUXURY,
+    
+} luxuryEnum;
 
 -(void)calculateTotalPrice;
 

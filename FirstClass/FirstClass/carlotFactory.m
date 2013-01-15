@@ -10,21 +10,21 @@
 
 @implementation carlotFactory
 
-+(baseCarlot *)createNewCarlot: (int)carlotType
++(baseCarlot *)createNewCarlot: (int)myCarlotType
 {
-   return [[economyCarlot alloc] init];
+   //return [[myCarlotType alloc] init];
     
-    if (carlotType == economy)
+    if (myCarlotType == economy)
     {
-        //return [[economyCarlot alloc] init];
-    } else if (carlotType == economy)
+        return [[economyCarlot alloc] init];
+    } else if (myCarlotType == race)
     {
-        //return [[raceCarlot alloc] init];
-    } else if (carlotType == race)
+        return [[raceCarlot alloc] init];
+    } else if (myCarlotType == luxury)
     {
        return [[luxuryCarlot alloc] init];
     } else return nil;
-   
+
 }
 
 @end

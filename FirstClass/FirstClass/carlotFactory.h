@@ -14,6 +14,6 @@
 
 @interface carlotFactory : NSObject
 
-+(baseCarlot *)createNewCarlot: (int)carlotType;
++(baseCarlot *)createNewCarlot: (int)myCarlotType;
 
 @end

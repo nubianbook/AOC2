@@ -10,16 +10,17 @@
 
 @implementation economyCarlot
 
-@synthesize howManySmallEngines, discount, cost;
+@synthesize smallEngines, discount, cost;
 
 -(id)init
 {
     self = [super init];
     if (self !=nil)
     {
-        [self setHowManySmallEngines:40];
+        [self setSmallEngines:40];
         [self setCarType:economy];
-        [self setCarName:@"Pinto"],
+        [self setCarName:@"Pinto"];
+        [self setDiscount:200];
         [self setCost:5000];
         NSLog(@"You are now on the economy Car lot");
     }
@@ -27,11 +28,12 @@
     
 }
 
+
 // overriding the baseCarlot count to factor in unique data members
--(void)calculateHowManySmallEngines
+-(void)calculateSmallEngines
 {
-    [self setHowManySmallEngines:(cost - howManySmallEngines)];
-    NSLog(@"There were %i cars remaining", self.howManySmallEngines);
+    [self setSmallEngines:(cost - discount)];
+    NSLog(@"There were %i cars remaining", self.smallEngines);
 }
 
 @end  

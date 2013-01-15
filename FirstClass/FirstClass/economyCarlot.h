@@ -10,8 +10,16 @@
 #import "baseCarlot.h"
 
 @interface economyCarlot : baseCarlot
+{
+    int economyEnum;
+}
+
+typedef enum{
+    ECONOMY,
+    
+} economyEnum;
 
 // data members of for how many cars total and how many cars left after sale
-@property int howManySmallEngines;
+@property int smallEngines;
 
 @end

@@ -23,11 +23,11 @@
             [self setCarName:@"Mustang"];
             [self setCost:70000];
             [self setDiscount:1500];
-            [self setTotalPriceRaceCar:0];
+            [self setTotalPriceRaceCar:52000];
             NSLog(@"You are now on the Race Car lot");
         }
-        return self;
-};
+        return self; 
+}
 
 // overwriting the calculation method
 -(void)calculateTotalPriceRaceCar

@@ -24,7 +24,7 @@
     
     // create a economy Carlot and set how many
     economyCarlot *carolsDealerShip = (economyCarlot*)[carlotFactory createNewCarlot:economy];
-    [carolsDealerShip setHowManySmallEngines:40];
+    [carolsDealerShip setSmallEngines:40];
     
     economyLabel = [[UILabel alloc] initWithFrame:CGRectMake(2.0f, 60.0f, 320.0f, 50.0f)];
     economyLabel.backgroundColor = [UIColor orangeColor];
@@ -38,7 +38,7 @@
     economyNumLabel.backgroundColor = [UIColor purpleColor];
     economyNumLabel.textColor = [UIColor whiteColor];
     economyNumLabel.numberOfLines = 4;
-    economyNumLabel.text = [NSString stringWithFormat:@"There are %i econ cars on the lot", [carolsDealerShip howManySmallEngines]];
+    economyNumLabel.text = [NSString stringWithFormat:@"There are %i econ cars on the lot", [carolsDealerShip smallEngines]];
     [self.view addSubview:economyNumLabel];
     
     
@@ -72,7 +72,7 @@
     raceCarNumLabel.backgroundColor = [UIColor orangeColor];
     raceCarNumLabel.textColor = [UIColor blueColor];
     raceCarNumLabel.numberOfLines = 4;
-    raceCarNumLabel.text = [NSString stringWithFormat:@"There are %i race cars on the lot", [carolsRaceCarlot pricePerEngineSize]];
+    raceCarNumLabel.text = [NSString stringWithFormat:@"There are %i race cars on the lot", [carolsRaceCarlot totalPriceRaceCar]];
     [self.view addSubview:raceCarNumLabel];
     
     if (carolsRaceCarlot != nil) {
@@ -106,7 +106,7 @@
     luxuryCarNumLabel.backgroundColor = [UIColor whiteColor];
     luxuryCarNumLabel.textColor = [UIColor blueColor];
     luxuryCarNumLabel.numberOfLines = 4;
-    luxuryCarNumLabel.text = [NSString stringWithFormat:@"There are %i luxury cars on the lot", [carolsLuxuryCarlot luxuryUpgradePrices]];
+    luxuryCarNumLabel.text = [NSString stringWithFormat:@"There are %i luxury cars on the lot", [carolsLuxuryCarlot luxuryTotalPrices]];
     [self.view addSubview:luxuryCarNumLabel];
     
     if (carolsLuxuryCarlot != nil) {
