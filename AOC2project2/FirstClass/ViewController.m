@@ -144,6 +144,14 @@
     }
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+     economyBtn.tintColor = [UIColor grayColor];
+     racerBtn.tintColor = [UIColor blueColor];
+     luxuryBtn.tintColor = [UIColor purpleColor];
+    
+}
+
 - (void)viewDidLoad
 {
     self.view.backgroundColor = [UIColor whiteColor];
