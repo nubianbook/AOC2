@@ -53,20 +53,20 @@
         viewlabel.text = [NSString stringWithFormat:@"%d", addup];
     } else if (economyBtn.enabled == false)
     {
-        viewlabel.text = [NSString stringWithFormat:@"%d economy", addup];
+        viewlabel.text = [NSString stringWithFormat:@"Economy %d", addup];
     } else if (racerBtn.enabled == false)
     {
-        viewlabel.text = [NSString stringWithFormat:@"%d racer", addup];
+        viewlabel.text = [NSString stringWithFormat:@"Racer %d", addup];
     } else if (luxuryBtn.enabled == false)
     {
-        viewlabel.text = [NSString stringWithFormat:@"%d luxury", addup];
+        viewlabel.text = [NSString stringWithFormat:@"Luxury %d", addup];
     }
 }
 
 -(IBAction)calculatorBtnFunction:(id)sender
 {
     int addup = stepper.value;
-    viewlabel.text = [NSString stringWithFormat:@"Lot is empty %d", addup];
+    viewlabel.text = [NSString stringWithFormat:@"Lot total %d", addup];
     if (economyBtn.enabled == false)
     {
         economyCarlot *economyLot = (economyCarlot*)[carlotFactory createNewCarlot:economy];
@@ -75,7 +75,7 @@
             [economyLot setSmallEngines:40];
             [economyLot calculateCarCost];
             int carTotal = economyLot.smallEngines * addup;
-            viewlabel.text = [NSString stringWithFormat:@"econ total cost =%d", carTotal];
+            viewlabel.text = [NSString stringWithFormat:@"econ total cost %d" , carTotal];
             stepper.value = 1;
         }
     } else if (racerBtn.enabled == false)
@@ -86,7 +86,7 @@
             [raceLot pricePerEngineSize];
             [raceLot totalPriceRaceCar];
             int carTotal = raceLot.totalPriceRaceCar * addup;
-            viewlabel.text = [NSString stringWithFormat:@"race carTotal=%d", carTotal];
+            viewlabel.text = [NSString stringWithFormat:@"race total %d" , carTotal];
             stepper.value = 1;
         }
     } else if (luxuryBtn.enabled == false)
@@ -97,9 +97,8 @@
             [luxuryLot luxuryTotalPrices];
             [luxuryLot totalPrice];
             int carTotal = luxuryLot.luxuryUpgradePrices * addup;
-            viewlabel.text = [NSString stringWithFormat:@"Luxury total cost %d", carTotal];
+            viewlabel.text = [NSString stringWithFormat:@"Luxury total %d" , carTotal];
             stepper.value = 1;
-            NSLog(@"you are at the luxury lot");
         }
         
     }
