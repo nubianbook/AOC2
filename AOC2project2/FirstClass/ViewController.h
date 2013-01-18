@@ -16,7 +16,7 @@
     IBOutlet UIButton *racerBtn;
     IBOutlet UIButton *luxuryBtn;
     IBOutlet UILabel *viewlabel;
-    IBOutlet UIButton * calculator;
+    IBOutlet UIButton *calculator;
     IBOutlet UIStepper *stepper;
     
     

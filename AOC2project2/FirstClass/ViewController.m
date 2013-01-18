@@ -16,7 +16,7 @@
 -(IBAction)economyBtnFunction:(id)sender
 {
     int addup = stepper.value;
-    viewlabel.text = [NSString stringWithFormat:@"Economy is %i", addup];
+    viewlabel.text = [NSString stringWithFormat:@"Economy is %d", addup];
     
     economyBtn.enabled = false;
     racerBtn.enabled = true;
@@ -26,7 +26,7 @@
 -(IBAction)racerBtnFunction:(id)sender
 {
     int addup = stepper.value;
-    viewlabel.text = [NSString stringWithFormat:@"Racer is %i", addup];
+    viewlabel.text = [NSString stringWithFormat:@"Racer is %d", addup];
     
     economyBtn.enabled = true;
     racerBtn.enabled = false;
@@ -37,7 +37,7 @@
 -(IBAction)luxuryBtnFunction:(id)sender
 {
     int addup = stepper.value;
-    viewlabel.text = [NSString stringWithFormat:@"Luxury is %i", addup];
+    viewlabel.text = [NSString stringWithFormat:@"Luxury is %d", addup];
     
     economyBtn.enabled = true;
     racerBtn.enabled = true;
@@ -66,43 +66,44 @@
 -(IBAction)calculatorBtnFunction:(id)sender
 {
     int addup = stepper.value;
-    viewlabel.text = [NSString stringWithFormat:@"Lot is empty %i", addup];
+    viewlabel.text = [NSString stringWithFormat:@"Lot is empty %d", addup];
     if (economyBtn.enabled == false)
     {
-        economyCarlot *economyLot = (economyCarlot*)[carlotFactory createNewCarlot:ECONOMY];
+        economyCarlot *economyLot = (economyCarlot*)[carlotFactory createNewCarlot:economy];
         if (economyLot !=nil)
         {
             [economyLot setSmallEngines:40];
             [economyLot calculateCarCost];
             int carTotal = economyLot.smallEngines * addup;
-            viewlabel.text = [NSString stringWithFormat:@"econ total cost =%i", carTotal];
+            viewlabel.text = [NSString stringWithFormat:@"econ total cost =%d", carTotal];
             stepper.value = 1;
         }
     } else if (racerBtn.enabled == false)
     {
-        raceCarlot *raceLot = (raceCarlot*)[carlotFactory createNewCarlot:RACE];
+        raceCarlot *raceLot = (raceCarlot*)[carlotFactory createNewCarlot:race];
         if (raceLot !=nil)
         {
             [raceLot pricePerEngineSize];
             [raceLot totalPriceRaceCar];
             int carTotal = raceLot.totalPriceRaceCar * addup;
-            viewlabel.text = [NSString stringWithFormat:@"race carTotal=%i", carTotal];
+            viewlabel.text = [NSString stringWithFormat:@"race carTotal=%d", carTotal];
             stepper.value = 1;
         }
     } else if (luxuryBtn.enabled == false)
     {
-        luxuryCarlot *luxuryLot = (luxuryCarlot*)[carlotFactory createNewCarlot:LUXURY];
+        luxuryCarlot *luxuryLot = (luxuryCarlot*)[carlotFactory createNewCarlot:luxury];
         if (luxuryLot !=nil)
         {
             [luxuryLot luxuryTotalPrices];
-            [luxuryLot luxuryUpgradePrices];
-            int carTotal = luxuryLot.totalPrice * addup;
+            [luxuryLot totalPrice];
+            int carTotal = luxuryLot.luxuryUpgradePrices * addup;
             viewlabel.text = [NSString stringWithFormat:@"Luxury total cost %d", carTotal];
             stepper.value = 1;
+            NSLog(@"you are at the luxury lot");
         }
         
     }
-    
+    stepper.value = 1;
 }
 
 /*- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField
@@ -110,21 +111,6 @@
     textField.text =@"";
     return true;
 }*/
-
-
-- (void)viewDidLoad
-{
-    self.view.backgroundColor = [UIColor whiteColor];
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 -(IBAction)infoOnClickBtn:(id)sender
 {
@@ -156,6 +142,20 @@
         }
         
     }
+}
+
+- (void)viewDidLoad
+{
+    self.view.backgroundColor = [UIColor whiteColor];
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 
