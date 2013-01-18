@@ -11,7 +11,7 @@
 @implementation baseCarlot
 
 // this synthesize creates get and set methods for each property
-@synthesize carType, carName, pricePerEngineSize, totalPriceRaceCar, discount, cost;
+@synthesize carType, carName, discount, cost;
 
 // initialize the base Carlot, creating the instance and setting up car cost to zero
 
@@ -23,8 +23,6 @@
         [self setCarType:nil];
         [self setCarName:nil];
         [self setDiscount:0];
-        [self setPricePerEngineSize:0];
-        [self setTotalPriceRaceCar:0];
         
     }
     return self;

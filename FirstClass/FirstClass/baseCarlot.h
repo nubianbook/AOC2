@@ -21,7 +21,7 @@ typedef enum{
 
 // these are my data members for cars available, an array for car colors and a NSString for car details
 
-@property (strong) NSArray *carType;  // I replaced (nonatomic, assign) with strong
+@property (strong) NSString *carType;  // I replaced (nonatomic, assign) with strong
 @property (strong) NSString *carName;
 @property int pricePerEngineSize;
 @property int totalPriceRaceCar;
