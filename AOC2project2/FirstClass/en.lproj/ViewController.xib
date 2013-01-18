@@ -182,7 +182,9 @@
 						<int key="IBUIContentHorizontalAlignment">0</int>
 						<int key="IBUIContentVerticalAlignment">0</int>
 						<bool key="IBUIWraps">YES</bool>
-						<double key="IBUIMaximumValue">3</double>
+						<double key="IBUIValue">1</double>
+						<double key="IBUIMinimumValue">1</double>
+						<double key="IBUIMaximumValue">4</double>
 					</object>
 					<object class="IBUILabel" id="156414616">
 						<reference key="NSNextResponder" ref="774585933"/>
@@ -285,7 +287,6 @@
 						<string key="NSFrame">{{167, 422}, {139, 44}}</string>
 						<reference key="NSSuperview" ref="774585933"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>

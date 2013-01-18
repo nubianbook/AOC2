@@ -57,7 +57,7 @@
     } else if (racerBtn.enabled == false)
     {
         viewlabel.text = [NSString stringWithFormat:@"%d racer", addup];
-    } else if (luxuryBtn == false)
+    } else if (luxuryBtn.enabled == false)
     {
         viewlabel.text = [NSString stringWithFormat:@"%d luxury", addup];
     }
