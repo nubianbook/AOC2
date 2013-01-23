@@ -19,8 +19,6 @@
     IBOutlet UIButton *calculator;
     IBOutlet UIStepper *stepper;
     
-    
-    
 }
 
 -(IBAction)infoOnClickBtn:(id)sender;

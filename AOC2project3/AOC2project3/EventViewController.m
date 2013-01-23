@@ -1,22 +1,21 @@
 //
-//  SecondViewController.m
-//  FirstClass - Project 2
+//  EventViewController.m
+//  AOC2project3
 //
-//  Created by Carol Gaylor on 1/17/13.
+//  Created by Carol Gaylor on 1/23/13.
 //  Copyright (c) 2013 Carol Gaylor. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "EventViewController.h"
 
-@interface SecondViewController ()
+@interface EventViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation EventViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -26,7 +25,6 @@
 
 - (void)viewDidLoad
 {
-    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -35,11 +33,6 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)infoBtnClose:(id)sender
-{
-    [self dismissViewControllerAnimated:true completion:nil];
 }
 
 @end
