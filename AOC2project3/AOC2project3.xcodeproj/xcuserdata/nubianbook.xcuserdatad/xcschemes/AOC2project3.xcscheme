@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EAE8DDA916AEEB4000F6C4CC"
+               BlueprintIdentifier = "EADA8E3B16B0402900B4B737"
                BuildableName = "AOC2project3.app"
                BlueprintName = "AOC2project3"
                ReferencedContainer = "container:AOC2project3.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAE8DDA916AEEB4000F6C4CC"
+            BlueprintIdentifier = "EADA8E3B16B0402900B4B737"
             BuildableName = "AOC2project3.app"
             BlueprintName = "AOC2project3"
             ReferencedContainer = "container:AOC2project3.xcodeproj">
@@ -51,7 +51,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAE8DDA916AEEB4000F6C4CC"
+            BlueprintIdentifier = "EADA8E3B16B0402900B4B737"
             BuildableName = "AOC2project3.app"
             BlueprintName = "AOC2project3"
             ReferencedContainer = "container:AOC2project3.xcodeproj">
@@ -69,7 +69,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EAE8DDA916AEEB4000F6C4CC"
+            BlueprintIdentifier = "EADA8E3B16B0402900B4B737"
             BuildableName = "AOC2project3.app"
             BlueprintName = "AOC2project3"
             ReferencedContainer = "container:AOC2project3.xcodeproj">
