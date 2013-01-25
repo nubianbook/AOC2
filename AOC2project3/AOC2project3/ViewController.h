@@ -11,11 +11,12 @@
 
 @interface ViewController : UIViewController <EventViewDelegate>
 {
+    // This is the outlets for my textView and my Label on the first page
     IBOutlet UITextView *eventView;
     IBOutlet UILabel *topLabel;
     NSString *everyEventString;
 }
 
-
+// This the action method for my add button
 -(IBAction)addOnClick:(id)sender;
 @end

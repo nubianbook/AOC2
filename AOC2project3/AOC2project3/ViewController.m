@@ -15,27 +15,16 @@
 
 @implementation ViewController
 
-//This is the delegate, collecting information from the other view through 2 parameters, closeString and closeDate
+
+//This delegate, is collecting info from the view through 2 parameters, closeString and closeDate
 -(void)closeView:(NSString*)closeString closeDate:(NSString *)closeDate
 {
-    //taking the two parameters passed in and combining them into one string
-    everyEventString = [NSString stringWithFormat:@"\n %@ on %@", closeString, closeDate];
+    //Now the parameters are combining them into one string
+    everyEventString = [NSString stringWithFormat:@"\n %@ event on \n %@\n", closeString, closeDate];
     
     //This appends everyEventString to the UITextView, which is eventView.
     eventView.text = [eventView.text stringByAppendingString:everyEventString];
-    
-    
-    //Not needed
-    //if (everyEventString != nil)
-    //{
-        
-        //everyEventString = [NSString stringWithFormat:@"\n %@ on %@", closeString, closeDate];
-        //everyEventString = [everyEventString stringByAppendingString:closeString];
-    //} else {
-    
-        //everyEventString = [NSString stringWithFormat:@"%@", closeString];
-    //}
-    
+
 }
 
 - (void)viewDidLoad
@@ -51,6 +40,7 @@
 }
 
 -(IBAction)addOnClick:(id)sender
+// This is the controls for my add button initiating my second view called EventView
 {
     EventViewController *myEventView = [[EventViewController alloc] initWithNibName:@"EventView" bundle:nil];
     myEventView.delegate = self;
