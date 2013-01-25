@@ -32,7 +32,6 @@
 -(IBAction)dateOnChange:(id)sender;
 -(IBAction)saveOnClick:(id)sender;
 
-//-(void)stringDate;
 
 @property (strong) id <EventViewDelegate> delegate;
 @end
