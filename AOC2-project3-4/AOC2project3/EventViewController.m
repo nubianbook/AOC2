@@ -27,15 +27,20 @@
         //stringEvent = [stringEvent stringByAppendingFormat:@"\n%@ \n\n", [dateForm stringFromDate:startEvent]];
         //return stringEvent;
 }*/
-// I am append 
+// I am appending my date info with string info to my textView 
 -(NSString*)appendStringToDate
 {
     // Creating and naming a new ns object
     NSDateFormatter * dateFormat = [[NSDateFormatter alloc] init];
-    // Setting my date format to my object
-    [dateFormat setDateFormat:@"EEE, MMM d, yyyy hh:mm a"];
-    // Calling my picker info string to my string event
-    stringEvent = [stringEvent stringByAppendingFormat:@"\n%@ \n\n", [dateFormat stringFromDate:startEvent]];
+    if (dateFormat != nil)
+    {
+        // Setting my date format to my object
+        [dateFormat setDateFormat:@"EEE, MMM d, yyyy hh:mm a"];
+        
+        // Calling my picker info string to my string event
+        stringEvent = [stringEvent stringByAppendingFormat:@"\n%@ \n\n", [dateFormat stringFromDate:startEvent]];
+    }
+    
     // I am returing my string event from my function
     return stringEvent;
 }

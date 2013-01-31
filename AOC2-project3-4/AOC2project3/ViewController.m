@@ -20,26 +20,17 @@
 {
 
     everyEventString = stringEvent;
-
-    
-    //taking the two parameters passed in and combining them into one string
-   /* if (everyEventString != nil)
-    {
-        everyEventString = [everyEventString stringByAppendingString:stringEvent];
-    } else {
-        everyEventString = [NSString stringWithFormat:@"%@", stringEvent];
-    }*/
     
     //Runs a conditional to check and see if the default text is present, which is "Events will be shown here"
     if ([eventView.text isEqualToString:@"Events will be shown here"])
     {
-        //Sets the text view text to be equal to the text we saved from the second view
+        //Sets the text view text to be equal to the text saved from the second view
         eventView.text = everyEventString;
     
     // checks to see whether the default is present.  If it is not present, the code below will run.
     } else if (![eventView.text isEqualToString:@"Events will be shown here"])
     {
-        //This appends instead of replaces the text.  Which means it adds to the text instead of replacing. 
+        //This appends instead of replaces the text and it adds to the text
         everyEventString = [eventView.text stringByAppendingString:stringEvent];
         
         //Sets the text view to equal the appended string
@@ -49,33 +40,18 @@
     }
     
 }    
-    
-    //This appends everyEventString to the UITextView, which is eventView.
-   // eventView.text = [eventView.text stringByAppendingString:everyEventString];
-
-    
-    //Not needed
-    //if (everyEventString != nil)
-    //{
         
-        //everyEventString = [NSString stringWithFormat:@"\n %@ on %@", closeString, closeDate];
-        //everyEventString = [everyEventString stringByAppendingString:closeString];
-    //} else {
-    
-        //everyEventString = [NSString stringWithFormat:@"%@", closeString];
-    //}
-    
 
-//Swipe right function that takes us to our second view
+//Swipe right function that swipes to second view
 -(void)onSwipe:(UIGestureRecognizer*)swipe
 {
-    //Creates an event view object that is linked to our second view.
+    //Creates an event view object that is linked to second view.
     EventViewController* myEventView = [[EventViewController alloc] initWithNibName:@"EventView" bundle:nil];
     
     //This sets the delegate for the view to self
     myEventView.delegate = self;
     
-    //Brings up the second view object that you created two lines above. It sets an animation, and a completion. 
+    //Brings up the second view object that created two lines above. It sets an animation 
     [self presentViewController:myEventView animated:true completion:nil];
 
 }

@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController <EventViewDelegate>
 {
+    // This is the outlets for my textView and my Label on the first page
     IBOutlet UITextView *eventView;
     IBOutlet UILabel *topLabel;
     IBOutlet UILabel *swiperLabel;
@@ -19,7 +20,7 @@
     NSString *everyEventString;
 }
 
-
+// This the action method for my add button
 -(IBAction)saveOnClick:(id)sender;
 
 @end
