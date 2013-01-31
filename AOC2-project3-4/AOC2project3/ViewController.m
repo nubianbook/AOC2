@@ -15,17 +15,39 @@
 
 @implementation ViewController
 
-//This delegate, is collecting info from the view through 2 parameters, closeString and closeDate
+//This delegate is collection the saved information from the eventviewcontroller and stores it in the parameter string event
 -(void)viewDidClose:(NSString*)stringEvent
 {
+
+    everyEventString = stringEvent;
+
+    NSLog(@"%@", stringEvent);
+    
     //taking the two parameters passed in and combining them into one string
-    if (everyEventString != nil)
+   /* if (everyEventString != nil)
     {
         everyEventString = [everyEventString stringByAppendingString:stringEvent];
     } else {
         everyEventString = [NSString stringWithFormat:@"%@", stringEvent];
+    }*/
+    
+    //Runs a conditional to check and see if the default text is present, which is "Events will be shown here"
+    if ([eventView.text isEqualToString:@"Events will be shown here"])
+    {
+        //Sets the text view text to be equal to the text we saved from the second view
+        eventView.text = everyEventString;
+    
+    // checks to see whether the default is present.  If it is not present, the code below will run.
+    } else if (![eventView.text isEqualToString:@"Events will be shown here"])
+    {
+        //This appends instead of replaces the text.  Which means it adds to the text instead of replacing. 
+        everyEventString = [eventView.text stringByAppendingString:stringEvent];
+        
+        //Sets the text view to equal the appended string
+        eventView.text = everyEventString;
+        
+            
     }
-     eventView.text = everyEventString;
     
 }    
     
@@ -45,19 +67,31 @@
     //}
     
 
-
+//Swipe right function that takes us to our second view
 -(void)onSwipe:(UIGestureRecognizer*)swipe
 {
+    //Creates an event view object that is linked to our second view.
     EventViewController* myEventView = [[EventViewController alloc] initWithNibName:@"EventView" bundle:nil];
+    
+    //This sets the delegate for the view to self
     myEventView.delegate = self;
-    [self presentViewController:myEventView animated:true completion:nil]; 
+    
+    //Brings up the second view object that you created two lines above. It sets an animation, and a completion. 
+    [self presentViewController:myEventView animated:true completion:nil];
 
 }
+
 
 // This is the new save on Click action function
 -(IBAction)saveOnClick:(id)sender
 {
-    [storedEvents setObject:everyEventString forKey:@"event"];
+    //Creating an NSUserDefaults object, naming it stored events, giving it a type of standard user defaults.
+    NSUserDefaults *storedEvents = [NSUserDefaults standardUserDefaults];
+    
+    //Sets a key/object pair. The object is the text from the text view, and the key is event.
+    [storedEvents setObject:eventView.text forKey:@"event"];
+    
+    //Commits to the nsuserdefault
     [storedEvents synchronize];
     
     //show alert to notify user of save
@@ -73,12 +107,20 @@
     rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(onSwipe:)];
     rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
     [swiperLabel addGestureRecognizer:rightSwipe];
+    
+    
+    NSUserDefaults *storedEvents = [NSUserDefaults standardUserDefaults];
+    NSString * containerString = [storedEvents objectForKey:@"event"];
+    eventView.text = containerString;
+    
+    /*
     storedEvents = [NSUserDefaults standardUserDefaults];
     everyEventString = [storedEvents objectForKey:@"event"];
     if (everyEventString != nil)
     {
         eventView.text = everyEventString;
     }
+    */
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }

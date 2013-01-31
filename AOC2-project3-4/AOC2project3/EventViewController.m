@@ -27,12 +27,16 @@
         //stringEvent = [stringEvent stringByAppendingFormat:@"\n%@ \n\n", [dateForm stringFromDate:startEvent]];
         //return stringEvent;
 }*/
-
+// I am append 
 -(NSString*)appendStringToDate
 {
+    // Creating and naming a new ns object
     NSDateFormatter * dateFormat = [[NSDateFormatter alloc] init];
+    // Setting my date format to my object
     [dateFormat setDateFormat:@"EEE, MMM d, yyyy hh:mm a"];
+    // Calling my picker info string to my string event
     stringEvent = [stringEvent stringByAppendingFormat:@"\n%@ \n\n", [dateFormat stringFromDate:startEvent]];
+    // I am returing my string event from my function
     return stringEvent;
 }
 
@@ -41,25 +45,36 @@
     [textInfo resignFirstResponder];
 }
 
+
+// Never use a string the is != nil for stringing to view
 -(void)onSwipe:(UIGestureRecognizer*)swipe
 {
-    NSCharacterSet* spaces = [NSCharacterSet whitespaceAndNewlineCharacterSet];
-    NSString* trimmedEvent = [textInfo.text stringByTrimmingCharactersInSet:spaces];
     
-    if (trimmedEvent != nil)
+    if ([textInfo.text length] == 0)
     {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Text" message:@"Please input event text" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
+        if (alertView != nil)
+        {
+            [alertView show];
+        }
+    } else if ([textInfo.text length] >= 1)
+    {
+        // Assigning the string of text view to a variable/container
         stringEvent = textInfo.text;
+        // delegating to apend to self
         [delegate viewDidClose:[self appendStringToDate]];
+        //  dismissing to the home view
         [self dismissViewControllerAnimated:true completion:nil];
+
     }
-    else{
-        //show alert to prompt description
-        UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:@"Error!"
+      
+            //show alert to prompt description
+       /* UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:@"Error!"
                                                              message:@"Please enter a description" delegate:nil
                                                    cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-        [errorAlert show];
-    }
-}
+        [errorAlert show];*/
+}     
+
 
 
 -(IBAction)onClick:(id)sender

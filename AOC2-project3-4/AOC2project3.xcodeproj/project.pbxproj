@@ -300,6 +300,7 @@
 				EADA8E6216B0402900B4B737 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
