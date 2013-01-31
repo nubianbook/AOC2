@@ -17,17 +17,7 @@
 @synthesize delegate;
 
 
-//No longer necessary
-/*-(void)stringDate
-{            //append the date to the event description
-        NSDateFormatter* dateForm = [[NSDateFormatter alloc] init];
-        [dateForm setDateFormat:@"EEE, MMM d, yyyy hh:mm a"];
-        dateString = [dateForm stringFromDate:startEvent];
-        NSLog(@"%@", dateString);
-        //stringEvent = [stringEvent stringByAppendingFormat:@"\n%@ \n\n", [dateForm stringFromDate:startEvent]];
-        //return stringEvent;
-}*/
-// I am appending my date info with string info to my textView 
+/// I am appending my date info with string info to my textView 
 -(NSString*)appendStringToDate
 {
     // Creating and naming a new ns object
@@ -45,16 +35,18 @@
     return stringEvent;
 }
 
+// Closing the Keyboard
 -(IBAction)closeKeyboard
 {
     [textInfo resignFirstResponder];
 }
 
 
-// Never use a string the is != nil for stringing to view
+// Never use a string the is != nil for stringing to view remember that
+
 -(void)onSwipe:(UIGestureRecognizer*)swipe
 {
-    
+    // This is my alert to user
     if ([textInfo.text length] == 0)
     {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Text" message:@"Please input event text" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
@@ -72,14 +64,8 @@
         [self dismissViewControllerAnimated:true completion:nil];
 
     }
-      
-            //show alert to prompt description
-       /* UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle:@"Error!"
-                                                             message:@"Please enter a description" delegate:nil
-                                                   cancelButtonTitle:@"Okay" otherButtonTitles: nil];
-        [errorAlert show];*/
+           
 }     
-
 
 
 -(IBAction)onClick:(id)sender
@@ -132,39 +118,4 @@
 
 
 @end
-        
-      /*  startEvent = pickerDate.date;
-        stringEvent = textInfo.text;
-        NSLog(@"%@", stringEvent);
-        
-        NSDateFormatter* dateForm = [[NSDateFormatter alloc] init];
-        [dateForm setDateFormat:@"EEE, MMM d, yyyy hh:mm a"];
-        dateString = [dateForm stringFromDate:startEvent];
-        NSLog(@"%@", dateString);
-        
-        //This conditional checks to see if text has been inputted
-        if ([textInfo.text length] == 0)
-        {
-            //Set up UI alert here saying that there is a required text limit
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Event info please" message:@"Opps you forgot some data" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
-            if (alert != nil)
-            {
-                [alert show];
-            }
-        }
-        else {
-            
-            //Passes information back to the delegate
-            //[delegate closeView:stringEvent closeDate:dateString];
-            
-            //Dismisses view
-            [self dismissViewControllerAnimated:true completion:nil];
-        }
-        
-    } else if ([sender tag] == 1)
-    {
-        [textInfo resignFirstResponder];
-    }
     
-}
-*/

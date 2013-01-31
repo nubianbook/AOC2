@@ -34,8 +34,7 @@
         everyEventString = [eventView.text stringByAppendingString:stringEvent];
         
         //Sets the text view to equal the appended string
-        eventView.text = everyEventString;
-        
+        eventView.text = everyEventString;        
             
     }
     
@@ -88,14 +87,6 @@
     NSString * containerString = [storedEvents objectForKey:@"event"];
     eventView.text = containerString;
     
-    /*
-    storedEvents = [NSUserDefaults standardUserDefaults];
-    everyEventString = [storedEvents objectForKey:@"event"];
-    if (everyEventString != nil)
-    {
-        eventView.text = everyEventString;
-    }
-    */
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
