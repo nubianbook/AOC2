@@ -15,7 +15,7 @@
     IBOutlet UILabel *topLabel;
     IBOutlet UILabel *swiperLabel;
     UISwipeGestureRecognizer *rightSwipe;
-    //NSUserDefaults *storedEvents; this isn't a variable, so it's not called in the header. 
+    //NSUserDefaults *storedEvents; //this isn't a variable, so it's not called in the header.
     NSString *everyEventString;
 }
 

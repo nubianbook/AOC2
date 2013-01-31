@@ -21,7 +21,6 @@
 
     everyEventString = stringEvent;
 
-    NSLog(@"%@", stringEvent);
     
     //taking the two parameters passed in and combining them into one string
    /* if (everyEventString != nil)
