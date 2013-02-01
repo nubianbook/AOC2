@@ -16,7 +16,7 @@
 
 @synthesize delegate;
 
-
+    
 /// I am appending my date info with string info to my textView 
 -(NSString*)appendStringToDate
 {
@@ -24,6 +24,9 @@
     NSDateFormatter * dateFormat = [[NSDateFormatter alloc] init];
     if (dateFormat != nil)
     {
+        // Local Variables
+        startEvent = pickerDate.date;
+        stringEvent = textInfo.text;
         // Setting my date format to my object
         [dateFormat setDateFormat:@"EEE, MMM d, yyyy hh:mm a"];
         
@@ -49,6 +52,9 @@
     // This is my alert to user
     if ([textInfo.text length] == 0)
     {
+        // Local Variables
+        startEvent = pickerDate.date;
+        stringEvent = textInfo.text;
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"No Text" message:@"Please input event text" delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles: nil];
         if (alertView != nil)
         {
